@@ -6,9 +6,9 @@
     <title>개수집계 / 계산시</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script>
-        function process(){
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        function process() {
             var aVal = document.getElementById("a").value;
             var bVal = document.getElementById("b").value;
             var cVal = document.getElementById("c").value;
@@ -17,6 +17,22 @@
             var fVal = document.getElementById("f").value;
             var gVal = document.getElementById("g").value;
             var hVal = document.getElementById("h").value;
+            var aVal2 = aVal * 1000 * 1.3104;
+            var bVal2 = bVal * 1000 * 1.5264;
+            var cVal2 = cVal * 1000 * 1.7424;
+            var dVal2 = dVal * 1000 * 1.7472;
+            var eVal2 = eVal * 1000 * 2.0352;
+            var fVal2 = fVal * 1000 * 2.3232;
+            var gVal2 = gVal * 1000 * 0.34;
+            var hVal2 = hVal * 1000 * 0.5;
+            aVal2 = Math.floor(aVal2 / 10) / 100;
+            bVal2 = Math.floor(bVal2 / 10) / 100;
+            cVal2 = Math.floor(cVal2 / 10) / 100;
+            dVal2 = Math.floor(dVal2 / 10) / 100;
+            eVal2 = Math.floor(eVal2 / 10) / 100;
+            fVal2 = Math.floor(fVal2 / 10) / 100;
+            gVal2 = Math.floor(gVal2 / 10) / 100;
+            hVal2 = Math.floor(hVal2 / 10) / 100;
             if (aVal.length <= 0) {
                 aVal = "0"
             }
@@ -41,9 +57,10 @@
             if (hVal.length <= 0) {
                 hVal = "0"
             }
+
             var resultVal1 = parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5;
             document.getElementById("result1").innerText = resultVal1;
-            var resultVal2 = String(aVal+" * 1.3104 + "+bVal+" * 1.5264 + "+cVal+" * 1.7424 + "+dVal+" * 1.7472 + "+eVal+" * 2.0352 + "+fVal+" * 2.3232 + "+gVal+" * 0.34 + "+hVal+" * 0.5\n")+aVal*1.3104+" + "+bVal*1.5264+" + "+cVal*1.7424+" + "+dVal*1.7472+" + "+eVal*2.0352+" + "+fVal*2.3232+" + "+gVal*0.34+" + "+hVal*0.5;
+            var resultVal2 = String(aVal + " * 1.3104 + " + bVal + " * 1.5264 + " + cVal + " * 1.7424 + " + dVal + " * 1.7472 + " + eVal + " * 2.0352 + " + fVal + " * 2.3232 + " + gVal + " * 0.34 + " + hVal + " * 0.5\n") + aVal2 + " + " + bVal2 + " + " + cVal2 + " + " + dVal2 + " + " + eVal2 + " + " + fVal2 + " + " + gVal2 + " + " + hVal2;
             document.getElementById("result2").innerText = resultVal2;
         }
     </script>
@@ -179,6 +196,7 @@
                         <h3>전체 계산 공식</h3>
                         <output class="form-control" id="result2">
                         </output>
+                        현재 계산은 소수점 둘째 자리 이하에서 절사한 값을 더합니다.<br>계산 값 착오 및 수정 사항 있을 시 degi@koasa.kr로 문의 주시면 감사하겠습니다.
                     </div>
 
                 </div>
