@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <title>개수집계 / 계산시</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+        function process(){
+            var aVal = document.getElementById("a").value;
+            var bVal = document.getElementById("b").value;
+            var cVal = document.getElementById("c").value;
+            var dVal = document.getElementById("d").value;
+            var eVal = document.getElementById("e").value;
+            var fVal = document.getElementById("f").value;
+            var gVal = document.getElementById("g").value;
+            var hVal = document.getElementById("h").value;
+            if (aVal.length <= 0) {
+                aVal = "0"
+            }
+            if (bVal.length <= 0) {
+                bVal = "0"
+            }
+            if (cVal.length <= 0) {
+                cVal = "0"
+            }
+            if (dVal.length <= 0) {
+                dVal = "0"
+            }
+            if (eVal.length <= 0) {
+                eVal = "0"
+            }
+            if (fVal.length <= 0) {
+                fVal = "0"
+            }
+            if (gVal.length <= 0) {
+                gVal = "0"
+            }
+            if (hVal.length <= 0) {
+                hVal = "0"
+            }
+            var resultVal1 = parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5;
+            document.getElementById("result1").innerText = resultVal1;
+            alert(resultVal1)
+        }
+    </script>
+</head>
+
+<body>
+    <form id='myform'>
+        <div class="container body-content">
+            <div class="container">
+                <div class="row justify-content-start" style="padding-top:10px;">
+                    <h1>개수집계 / 계산시</h1>
+                </div>
+                <div class="row justify-content-start" style="padding-top:15px;">
+                    <div class="col" style="padding-top:0px;">
+                        <h3>소골</h3>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <h3></h3>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:0px;">
+                    <div class="col" style="padding-top:0px;">
+                        <label>182 x 72</label>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <label>212 x 72</label>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <label>242 x 72</label>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:0px;">
+                    <div class="col" style="padding-top:0px;">
+                        <input class="form-control" id="a"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <input class="form-control" id="b"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <input class="form-control" id="c"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:30px;">
+                    <div class="col" style="padding-top:0px;">
+                        <h3>대골</h3>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <h3></h3>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:0px;">
+                    <div class="col" style="padding-top:0px;">
+                        <label>182 x 96</label>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <label>212 x 96</label>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <label>242 x 96</label>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:0px;">
+                    <div class="col" style="padding-top:0px;">
+                        <input class="form-control" id="d"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <input class="form-control" id="e"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <input class="form-control" id="f"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:30px;">
+                    <div class="col" style="padding-top:0px;">
+                        <h3>용마루</h3>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <h3>기와</h3>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:0px;">
+                    <div class="col" style="padding-top:0px;">
+                        <label>100 x 34</label>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <label>100 x 50</label>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <label>
+                            <h3>결과확인</h3>
+                        </label>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:0px;">
+                    <div class="col" style="padding-top:0px;">
+                        <input class="form-control" id="g"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <input class="form-control" id="h"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <output class="form-control" id="result1">
+                        </output>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="padding-top:10px;">
+                </div>
+                <div class="row justify-content-end" style="padding-top:10px;">
+                    <button class="btn btn-primary" type="button" onclick="process();">결과 확인</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
