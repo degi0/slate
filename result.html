@@ -33,33 +33,43 @@
             fVal2 = Math.floor(fVal2 / 10) / 100;
             gVal2 = Math.floor(gVal2 / 10) / 100;
             hVal2 = Math.floor(hVal2 / 10) / 100;
+            var aVal3 = aVal2 + " + ", bVal3 = bVal2 + " + ", cVal3 = cVal2 + " + ", dVal3 = dVal2 + " + ", eVal3 = eVal2 + " + ", fVal3 = fVal2 + " + ", gVal3 = gVal2 + " + ", hVal3 = hVal2;
             if (aVal.length <= 0) {
                 aVal = "0"
+                aVal3 = ""
             }
             if (bVal.length <= 0) {
                 bVal = "0"
+                bVal3 = ""
             }
             if (cVal.length <= 0) {
                 cVal = "0"
+                cVal3 = ""
             }
             if (dVal.length <= 0) {
                 dVal = "0"
+                dVal3 = ""
             }
             if (eVal.length <= 0) {
                 eVal = "0"
+                eVal3 = ""
             }
             if (fVal.length <= 0) {
                 fVal = "0"
+                fVal3 = ""
             }
             if (gVal.length <= 0) {
                 gVal = "0"
+                gVal3 = ""
             }
             if (hVal.length <= 0) {
                 hVal = "0"
+                hVal3 = ""
             }
             var resultVal1 = (parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5).toFixed(2);
             document.getElementById("result1").innerText = resultVal1;
-            var resultVal2 = String("("+aVal + " * 1.3104) + (" + bVal + " * 1.5264) + (" + cVal + " * 1.7424) + (" + dVal + " * 1.7472) + (" + eVal + " * 2.0352) + (" + fVal + " * 2.3232) + (" + gVal + " * 0.34) + (" + hVal + " * 0.5)\n") + aVal2 + " + " + bVal2 + " + " + cVal2 + " + " + dVal2 + " + " + eVal2 + " + " + fVal2 + " + " + gVal2 + " + " + hVal2;
+            var resultVal2 = String("(" + aVal + " * 1.3104) + (" + bVal + " * 1.5264) + (" + cVal + " * 1.7424) + (" + dVal + " * 1.7472) + (" + eVal + " * 2.0352) + (" + fVal + " * 2.3232) + (" + gVal + " * 0.34) + (" + hVal + " * 0.5)\n") + aVal3 + bVal3 + cVal3 + dVal3 + eVal3 + fVal3 + gVal3 + hVal3;
+            resultVal2 = resultVal2.substr(0, resultVal2.length - 2) + " = " + resultVal1;
             document.getElementById("result2").innerText = resultVal2;
         }
     </script>
@@ -195,7 +205,8 @@
                         <h3>전체 계산 공식</h3>
                         <output class="form-control" id="result2">
                         </output>
-                        <h6>현재 계산은 소수점 둘째 자리 이하에서 절사한 값을 더합니다.<br>계산 값 착오 및 수정 사항 있을 시 degi@koasa.kr로 문의 주시면 감사하겠습니다.</h6>
+                        <h6>현재 계산은 소수점 둘째 자리 이하에서 절사한 값을 더합니다.<br>계산 값 착오 및 수정 사항 있을 시 degi@koasa.kr로 문의 주시면 감사하겠습니다.
+                        </h6>
                     </div>
 
                 </div>
