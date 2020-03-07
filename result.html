@@ -57,10 +57,9 @@
             if (hVal.length <= 0) {
                 hVal = "0"
             }
-
-            var resultVal1 = parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5;
+            var resultVal1 = (parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5).toFixed(2);
             document.getElementById("result1").innerText = resultVal1;
-            var resultVal2 = String(aVal + " * 1.3104 + " + bVal + " * 1.5264 + " + cVal + " * 1.7424 + " + dVal + " * 1.7472 + " + eVal + " * 2.0352 + " + fVal + " * 2.3232 + " + gVal + " * 0.34 + " + hVal + " * 0.5\n") + aVal2 + " + " + bVal2 + " + " + cVal2 + " + " + dVal2 + " + " + eVal2 + " + " + fVal2 + " + " + gVal2 + " + " + hVal2;
+            var resultVal2 = String("("+aVal + " * 1.3104) + (" + bVal + " * 1.5264) + (" + cVal + " * 1.7424) + (" + dVal + " * 1.7472) + (" + eVal + " * 2.0352) + (" + fVal + " * 2.3232) + (" + gVal + " * 0.34) + (" + hVal + " * 0.5)\n") + aVal2 + " + " + bVal2 + " + " + cVal2 + " + " + dVal2 + " + " + eVal2 + " + " + fVal2 + " + " + gVal2 + " + " + hVal2;
             document.getElementById("result2").innerText = resultVal2;
         }
     </script>
