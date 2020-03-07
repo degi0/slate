@@ -66,9 +66,9 @@
                 hVal = "0"
                 hVal3 = ""
             }
-            var resultVal1 = (parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5).toFixed(2);
+            var resultVal1 = Math.floor((parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5)*100)/100;
             document.getElementById("result1").innerText = resultVal1;
-            var resultVal2 = String("(" + aVal + " * 1.3104) + (" + bVal + " * 1.5264) + (" + cVal + " * 1.7424) + (" + dVal + " * 1.7472) + (" + eVal + " * 2.0352) + (" + fVal + " * 2.3232) + (" + gVal + " * 0.34) + (" + hVal + " * 0.5)\n") + aVal3 + bVal3 + cVal3 + dVal3 + eVal3 + fVal3 + gVal3 + hVal3;
+            var resultVal2 = String("(" + aVal + " * 1.3104) + (" + bVal + " * 1.5264) + (" + cVal + " * 1.7424) + (" + dVal + " * 1.7472) + (" + eVal + " * 2.0352) + (" + fVal + " * 2.3232) + (" + gVal + " * 0.34) + (" + hVal + " * 0.5)\n\n") + aVal3 + bVal3 + cVal3 + dVal3 + eVal3 + fVal3 + gVal3 + hVal3;
             resultVal2 = resultVal2.substr(0, resultVal2.length - 2) + " = " + resultVal1;
             document.getElementById("result2").innerText = resultVal2;
         }
