@@ -43,7 +43,9 @@
             }
             var resultVal1 = parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5;
             document.getElementById("result1").innerText = resultVal1;
-            alert(resultVal1)
+            var resultVal2 = String(aVal+" * 1.3104 + "+bVal+" * 1.5264 + "+cVal+" * 1.7424 + "+dVal+" * 1.7472 + "+eVal+" * 2.0352 + "+fVal+" * 2.3232 + "+gVal+" * 0.34 + "+hVal+" * 0.5\n")+aVal*1.3104+" + "+bVal*1.5264+" + "+cVal*1.7424+" + "+dVal*1.7472+" + "+eVal*2.0352+" + "+fVal*2.3232+" + "+gVal*0.34+" + "+hVal*0.5;
+            document.getElementById("result2").innerText = resultVal2;
+            alert(resultVal2)
         }
     </script>
 </head>
@@ -172,6 +174,14 @@
                         <output class="form-control" id="result1">
                         </output>
                     </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:30px;">
+                    <div class="col" style="padding-top:0px;">
+                        <h3>전체 계산 공식</h3>
+                        <output class="form-control" id="result2">
+                        </output>
+                    </div>
+
                 </div>
                 <div class="row justify-content-center" style="padding-top:10px;">
                 </div>
