@@ -8,6 +8,29 @@
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
+        function numberFormat(number) {
+            var string = number.toString();
+            var length = string.length;
+            var standard = (length % 3 === 0) ? 3 : length % 3;
+            var arr = [];
+
+            var start = 0;
+
+            while (true) {
+                var temp = string.substr(start, standard);
+
+                if (temp === "") break;
+
+                arr.push(temp);
+
+                start = start + standard;
+                standard = 3;
+            }
+
+            var result = arr.join(",");
+
+            return result;
+        }
         function process() {
             var aVal = document.getElementById("a").value;
             var bVal = document.getElementById("b").value;
@@ -17,6 +40,14 @@
             var fVal = document.getElementById("f").value;
             var gVal = document.getElementById("g").value;
             var hVal = document.getElementById("h").value;
+            var unit_cost = document.getElementById("unit_cost").value;
+
+            const house_fund = 3164800;
+            const non_house_fund = 1582400;
+
+            var house_money = Math.floor((house_fund / unit_cost * 1000) / 10) / 100;
+            var non_house_money = Math.floor((non_house_fund / unit_cost * 1000) / 10) / 100;
+
             var aVal2 = aVal * 1000 * 1.3104;
             var bVal2 = bVal * 1000 * 1.5264;
             var cVal2 = cVal * 1000 * 1.7424;
@@ -25,6 +56,7 @@
             var fVal2 = fVal * 1000 * 2.3232;
             var gVal2 = gVal * 1000 * 0.34;
             var hVal2 = hVal * 1000 * 0.5;
+
             aVal2 = Math.floor(aVal2 / 10) / 100;
             bVal2 = Math.floor(bVal2 / 10) / 100;
             cVal2 = Math.floor(cVal2 / 10) / 100;
@@ -33,44 +65,77 @@
             fVal2 = Math.floor(fVal2 / 10) / 100;
             gVal2 = Math.floor(gVal2 / 10) / 100;
             hVal2 = Math.floor(hVal2 / 10) / 100;
+
+            var aVal4 = aVal * 1.3104 * unit_cost;
+            var bVal4 = bVal * 1.5264 * unit_cost;
+            var cVal4 = cVal * 1.7424 * unit_cost;
+            var dVal4 = dVal * 1.7472 * unit_cost;
+            var eVal4 = eVal * 2.0352 * unit_cost;
+            var fVal4 = fVal * 2.3232 * unit_cost;
+            var gVal4 = gVal * 0.34 * unit_cost;
+            var hVal4 = hVal * 0.5 * unit_cost;
+
+            aVal4 = Math.floor(aVal4 / 10) * 10;
+            bVal4 = Math.floor(bVal4 / 10) * 10;
+            cVal4 = Math.floor(cVal4 / 10) * 10;
+            dVal4 = Math.floor(dVal4 / 10) * 10;
+            eVal4 = Math.floor(eVal4 / 10) * 10;
+            fVal4 = Math.floor(fVal4 / 10) * 10;
+            gVal4 = Math.floor(gVal4 / 10) * 10;
+            hVal4 = Math.floor(hVal4 / 10) * 10;
+
+            var total = aVal4 + bVal4 + cVal4 +dVal4+eVal4+fVal4+gVal4+hVal4;
+
             var aVal3 = aVal2 + " + ", bVal3 = bVal2 + " + ", cVal3 = cVal2 + " + ", dVal3 = dVal2 + " + ", eVal3 = eVal2 + " + ", fVal3 = fVal2 + " + ", gVal3 = gVal2 + " + ", hVal3 = hVal2 + "  ";
+            aVal4 = numberFormat(aVal4) + " + ", bVal4 = numberFormat(bVal4) + " + ", cVal4 = numberFormat(cVal4) + " + ",dVal4 = numberFormat(dVal4) + " + ",eVal4 = numberFormat(eVal4) + " + ",fVal4 = numberFormat(fVal4) + " + ",gVal4 = numberFormat(gVal4) + " + ",hVal4 = numberFormat(hVal4) + "  ";
             if (aVal.length <= 0) {
                 aVal = "0"
                 aVal3 = ""
+                aVal4 = ""
             }
             if (bVal.length <= 0) {
                 bVal = "0"
                 bVal3 = ""
+                bVal4 = ""
             }
             if (cVal.length <= 0) {
                 cVal = "0"
                 cVal3 = ""
+                cVal4 = ""
             }
             if (dVal.length <= 0) {
                 dVal = "0"
                 dVal3 = ""
+                dVal4 = ""
             }
             if (eVal.length <= 0) {
                 eVal = "0"
                 eVal3 = ""
+                eVal4 = ""
             }
             if (fVal.length <= 0) {
                 fVal = "0"
                 fVal3 = ""
+                fVal4 = ""
             }
             if (gVal.length <= 0) {
                 gVal = "0"
                 gVal3 = ""
+                gVal4 = ""
             }
             if (hVal.length <= 0) {
                 hVal = "0"
                 hVal3 = ""
+                hVal4 = ""
             }
-            var resultVal1 = Math.floor((parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5)*100)/100;
+            var resultVal1 = Math.floor((parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5) * 100) / 100;
             document.getElementById("result1").innerText = resultVal1;
             var resultVal2 = String("(" + aVal + " * 1.3104) + (" + bVal + " * 1.5264) + (" + cVal + " * 1.7424) + (" + dVal + " * 1.7472) + (" + eVal + " * 2.0352) + (" + fVal + " * 2.3232) + (" + gVal + " * 0.34) + (" + hVal + " * 0.5)\n\n") + aVal3 + bVal3 + cVal3 + dVal3 + eVal3 + fVal3 + gVal3 + hVal3;
-            resultVal2 = resultVal2.substr(0, resultVal2.length - 2) + " = " + resultVal1;
+            var resultVal3 = String(aVal4 + bVal4 + cVal4 + dVal4 + eVal4 + fVal4 + gVal4 + hVal4);
+            resultVal2 = resultVal2.substr(0, resultVal2.length - 2) + " = " + resultVal1 + "\n\n" + resultVal3.substr(0, resultVal3.length - 2) + " = " + numberFormat(total);
             document.getElementById("result2").innerText = resultVal2;
+            document.getElementById("result3").innerText = house_money;
+            document.getElementById("result4").innerText = non_house_money;
         }
     </script>
 </head>
@@ -81,6 +146,32 @@
             <div class="container">
                 <div class="row justify-content-start" style="padding-top:10px;">
                     <h2>개수집계 / 계산기</h2>
+                </div>
+                <div class="row justify-content-start" style="padding-top:15px;">
+                    <div class="col" style="padding-top:0px;">
+                        <h3>낙찰 단가</h3>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <h3>주택 지원면적</h3>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <h3>비주택 지원면적</h3>
+                    </div>
+                </div>
+                <div class="row justify-content-start" style="padding-top:0px;">
+                    <div class="col" style="padding-top:0px;">
+                        <input type="tel" class="form-control" id="unit_cost"
+                            onkeyPress="if ((event.keyCode < 47 || event.keyCode > 58) && event.keyCode != 45 && event.keyCode != 46) event.returnValue=false;"
+                            style="ime-mode:disabled;"></input>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <output class="form-control" id="result3">
+                        </output>
+                    </div>
+                    <div class="col" style="padding-top:0px;">
+                        <output class="form-control" id="result4">
+                        </output>
+                    </div>
                 </div>
                 <div class="row justify-content-start" style="padding-top:15px;">
                     <div class="col" style="padding-top:0px;">
