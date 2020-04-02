@@ -132,7 +132,19 @@
             document.getElementById("result1").innerText = resultVal1;
             var resultVal2 = String("(" + aVal + " * 1.3104) + (" + bVal + " * 1.5264) + (" + cVal + " * 1.7424) + (" + dVal + " * 1.7472) + (" + eVal + " * 2.0352) + (" + fVal + " * 2.3232) + (" + gVal + " * 0.34) + (" + hVal + " * 0.5)\n\n") + aVal3 + bVal3 + cVal3 + dVal3 + eVal3 + fVal3 + gVal3 + hVal3;
             var resultVal3 = String(aVal4 + bVal4 + cVal4 + dVal4 + eVal4 + fVal4 + gVal4 + hVal4);
-            resultVal2 = resultVal2.substr(0, resultVal2.length - 2) + " = " + resultVal1 + "\n\n" + resultVal3.substr(0, resultVal3.length - 2) + " = " + numberFormat(total) + "\n\n" + "총 면적 : " + resultVal1 + " - " + house_money + " = " + (Math.floor(resultVal1 * 100 - house_money * 100) / 100) + "\n\n 총 금액 \n주택 : " + numberFormat(total) + " - " + numberFormat(house_fund) + " = " + numberFormat(total - house_fund) + "\n비주택 : " + numberFormat(total) + " - " + numberFormat(non_house_fund) + " = " + numberFormat(total - non_house_fund);
+            resultVal2 = resultVal2.substr(0, resultVal2.length - 2) + " = " + resultVal1 + "\n\n" + resultVal3.substr(0, resultVal3.length - 2) + " = " + numberFormat(total);
+            if (total - house_fund > 0) {
+                resultVal2 = resultVal2 + "\n\n주택\n초과 면적 : " + resultVal1 + " - " + house_money + " = " + (Math.floor(resultVal1 * 100 - house_money * 100) / 100) + "\n추가적으로 발생하는 자부담\n" + numberFormat(total) + " - " + numberFormat(house_fund) + " = " + numberFormat(total - house_fund);
+            }
+            else {
+                resultVal2 = resultVal2 + "\n\n============================\n주택 지원금의 추가적인 자부담은 없습니다.\n============================";
+            }
+            if (total - non_house_fund > 0) {
+                resultVal2 = resultVal2 + "\n\n비주택\n초과 면적 : " + resultVal1 + " - " + non_house_money + " = " + (Math.floor(resultVal1 * 100 - non_house_money * 100) / 100) + "\n추가적으로 발생하는 자부담\n" + numberFormat(total) + " - " + numberFormat(non_house_fund) + " = " + numberFormat(total - non_house_fund);
+            }
+            else {
+                resultVal2 = resultVal2 + "\n\n============================\n비주택 지원금의 추가적인 자부담은 없습니다.\n============================";
+            }
             document.getElementById("result2").innerText = resultVal2;
             document.getElementById("result3").innerText = house_money;
             document.getElementById("result4").innerText = non_house_money;
