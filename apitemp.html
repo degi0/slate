@@ -10,7 +10,6 @@
 <input type="text" id="sample3_buildingCode" placeholder="건물관리번호">
 <input type="button" onclick="sample3_execDaumPostcode()" value="우편번호 찾기"><br>
 <input type="text" id="sample3_address" placeholder="주소"><br>
-<input type="text" id="sample3_detailAddress" placeholder="상세주소">
 <input type="text" id="sample3_extraAddress" placeholder="참고항목">
 
 <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
@@ -72,7 +71,7 @@
                 document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do;jsessionid=UI82J8dIRfmjNigmgZgL5qfqletnkc404BIO14I3BBJs89MZVv5P1zmkJeBhhltN.rimswas03_servlet_engine2?pnu='+data.bcode+data.buildingCode.substr(10,10);
                 document.getElementById("sample3_address").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
-                document.getElementById("sample3_detailAddress").focus();
+                document.getElementById("sample3_buildingCode").focus();
 
                 // iframe을 넣은 element를 안보이게 한다.
                 // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
