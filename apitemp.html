@@ -73,7 +73,7 @@
                 pos = data.jibunAddressEnglish.indexOf("-");
                 var jiCd = data.jibunAddressEnglish.substr(0,pos);
                 
-                document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do;jsessionid=UI82J8dIRfmjNigmgZgL5qfqletnkc404BIO14I3BBJs89MZVv5P1zmkJeBhhltN.rimswas03_servlet_engine2?pnu='+bunCd;
+                document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do;jsessionid=UI82J8dIRfmjNigmgZgL5qfqletnkc404BIO14I3BBJs89MZVv5P1zmkJeBhhltN.rimswas03_servlet_engine2?pnu='+addZero(4,jiCd);
                 document.getElementById("sample3_address").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
                 document.getElementById("sample3_buildingCode").focus();
