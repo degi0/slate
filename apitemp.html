@@ -68,7 +68,7 @@
                 }
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do;jsessionid=UI82J8dIRfmjNigmgZgL5qfqletnkc404BIO14I3BBJs89MZVv5P1zmkJeBhhltN.rimswas03_servlet_engine2?pnu='+data.bcode+data.buildingCode.substr(10,10);
+                document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do;jsessionid=UI82J8dIRfmjNigmgZgL5qfqletnkc404BIO14I3BBJs89MZVv5P1zmkJeBhhltN.rimswas03_servlet_engine2?pnu='+data.autoJibunAddressEnglish.split("\n").map(e => e.split(",")[0].split("-").map(n => addZero(n)));
                 document.getElementById("sample3_address").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
                 document.getElementById("sample3_buildingCode").focus();
@@ -91,4 +91,9 @@
         // iframe을 넣은 element를 보이게 한다.
         element_wrap.style.display = 'block';
     }
+    function addZero(d,num){
+        num+="";
+    return num.length>=d ? num : "0".repeat(d-num.length)+num;
+    }
+}
 </script>
