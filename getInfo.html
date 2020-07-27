@@ -10,7 +10,7 @@
                         myFunction(this);
                     }
                 };
-                req.open("GET", "xml_sample.xml", true);
+                req.open("GET", "http://apis.data.go.kr/1611000/BldRgstService/getBrFlrOulnInfo?serviceKey=cPgihCcCXlpqbxl5eMW700UoKtA9C2%2Bcl04PVkj1JCbudHHJ06z%2BiNOPO8Mmmm%2F4vlPZAN0EHGGk%2BCZZOFjZBw%3D%3D&sigunguCd=31710&bjdongCd=25921&platGbCd=0&bun=0428&ji=0002&startDate=&endDate=&numOfRows=10&pageNo=1", true);
                 req.send();
             }
  
@@ -18,24 +18,24 @@
                 var i;
                 var xmlDoc = xml.responseXML;
  
-                var gname = xmlDoc.getElementsByTagName("name")[0].firstChild.data;
-                document.getElementById("gname").innerHTML = gname;
+                var gname = xmlDoc.getElementsByTagName("newPlatPlc")[0].firstChild.data;
+                document.getElementById("item").innerHTML = gname;
  
                 var members = "";
-                var member = xmlDoc.getElementsByTagName("member");
+                var member = xmlDoc.getElementsByTagName("item");
                 for (i = 0; i < member.length; i++) { 
                     if (i != 0) { members += ", "; }
                     members += member[i].firstChild.data;
                 }
-                document.getElementById("members").innerHTML = members;
+                document.getElementById("item").innerHTML = members;
  
                 var albums = "";
-                var album = xmlDoc.getElementsByTagName("album");
+                var album = xmlDoc.getElementsByTagName("item");
                 for (i = 0; i < album.length; i++) { 
                     albums += "<li>" + album[i].getAttribute('order') + ": " +
                     album[i].firstChild.data + "</li>\n";
                 }
-                document.getElementById("albums").innerHTML = albums;
+                document.getElementById("item").innerHTML = albums;
             }
         </script>
         <title>AJAX Sample</title>
@@ -43,8 +43,8 @@
  
     <body onload="loadDoc();">
         <h2 id="gname"></h2>
-        <p>멤버 구성: <span id="members"></span></p>
+        <p>멤버 구성: <span id="item"></span></p>
         <h3>앨범 목록</h3>
-        <ul id="albums"></ul>
+        <ul id="item"></ul>
     </body>
 </html>
