@@ -72,7 +72,7 @@
                 var jiCd = data.jibunAddressEnglish.substr(0,pos);
                 pos = jiCd.indexOf("-");
                 var bunCd = data.jibunAddressEnglish.substr(0,pos);
-                
+                jiCd = jiCd.substr(pos+1,jiCd.length);
                 
                 document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do;jsessionid=UI82J8dIRfmjNigmgZgL5qfqletnkc404BIO14I3BBJs89MZVv5P1zmkJeBhhltN.rimswas03_servlet_engine2?pnu='+jiCd;
                 document.getElementById("sample3_address").value = addr;
