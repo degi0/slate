@@ -70,9 +70,10 @@
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 var pos = data.jibunAddressEnglish.indexOf(",");
-                var jiCd = data.jibunAddressEnglish.substr(0,pos);
+                var jiCd = if(data.jibunAddressEnglish.substr(0,pos)==0){data.autoJibunAddressEnglish.substr(0,pos);}else{data.jibunAddressEnglish.substr(0,pos);}
+                alert(jiCd);
                 pos = jiCd.indexOf("-");
-                var bunCd = data.jibunAddressEnglish.substr(0,pos);
+                var bunCd = if(data.jibunAddressEnglish.substr(0,pos)==0){data.autojibunAddressEnglish.substr(0,pos);}else{data.jibunAddressEnglish.substr(0,pos);}
                 jiCd = jiCd.substr(pos+1,jiCd.length);
                 
                 document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do?pnu='+data.bcode+'1'+addZero(4,jiCd)+addZero(4,bunCd);
