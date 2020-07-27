@@ -9,7 +9,8 @@
 <body>
 <input type="text" id="sample3_buildingCode" placeholder="건물관리번호">
 <input type="button" onclick="sample3_execDaumPostcode()" value="우편번호 찾기"><br>
-<input type="text" id="sample3_address" placeholder="주소"><br>
+<input type="text" id="sample3_address" placeholder="주소">
+<input type="button" onclick="sample3_guktto()" value="국토정보 확인"><br>
 <input type="text" id="sample3_extraAddress" placeholder="참고항목">
 
 <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
@@ -68,10 +69,10 @@
                 }
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                var pos = data.jibunAddressEnglish.indexOf(",");
-                var jiCd = data.jibunAddressEnglish.substr(0,pos);
+                var pos = data.autoJibunAddressEnglish.indexOf(",");
+                var jiCd = data.autoJibunAddressEnglish.substr(0,pos);
                 pos = jiCd.indexOf("-");
-                var bunCd = data.jibunAddressEnglish.substr(0,pos);
+                var bunCd = data.autoJibunAddressEnglish.substr(0,pos);
                 jiCd = jiCd.substr(pos+1,jiCd.length);
                 
                 document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do;jsessionid=UI82J8dIRfmjNigmgZgL5qfqletnkc404BIO14I3BBJs89MZVv5P1zmkJeBhhltN.rimswas03_servlet_engine2?pnu='+data.bcode+'1'+addZero(4,bunCd)+addZero(4,jiCd);
