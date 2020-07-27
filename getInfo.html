@@ -19,7 +19,7 @@
                 var xmlDoc = xml.responseXML;
  
                 var gname = xmlDoc.getElementsByTagName("newPlatPlc")[0].firstChild.data;
-                document.getElementById("item").innerHTML = gname;
+                document.getElementById("name").innerHTML = gname;
  
                 var members = "";
                 var member = xmlDoc.getElementsByTagName("item");
