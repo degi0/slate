@@ -70,7 +70,7 @@
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 var pos = data.jibunAddressEnglish.indexOf(",");
                 var bunCd = data.jibunAddressEnglish.substr(0,pos);
-                pos = data.jibunAddressEnglish.indexOf("-");
+                pos = bunCd.indexOf("-");
                 var jiCd = data.jibunAddressEnglish.substr(0,pos);
                 
                 document.getElementById('sample3_buildingCode').value = 'https://m.nsdis.go.kr/mbl/iqy/selectEstateBuldView.do;jsessionid=UI82J8dIRfmjNigmgZgL5qfqletnkc404BIO14I3BBJs89MZVv5P1zmkJeBhhltN.rimswas03_servlet_engine2?pnu='+addZero(4,jiCd);
