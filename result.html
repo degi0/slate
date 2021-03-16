@@ -50,41 +50,41 @@
             var non_house_money = Math.floor((non_house_fund / unit_cost * 1000) / 10) / 100;
 			var non_house_money2 = Math.floor((non_house_fund2 / unit_cost * 1000) / 10) / 100;
 
-            var aVal2 = aVal * 1000 * 1.3104;
-            var bVal2 = bVal * 1000 * 1.5264;
-            var cVal2 = cVal * 1000 * 1.7424;
-            var dVal2 = dVal * 1000 * 1.7472;
-            var eVal2 = eVal * 1000 * 2.0352;
-            var fVal2 = fVal * 1000 * 2.3232;
-            var gVal2 = gVal * 1000 * 0.34;
-            var hVal2 = hVal * 1000 * 0.5;
+            var aVal2 = aVal * 10000 * 1.3104;
+            var bVal2 = bVal * 10000 * 1.5264;
+            var cVal2 = cVal * 10000 * 1.7424;
+            var dVal2 = dVal * 10000 * 1.7472;
+            var eVal2 = eVal * 10000 * 2.0352;
+            var fVal2 = fVal * 10000 * 2.3232;
+            var gVal2 = gVal * 10000 * 0.34;
+            var hVal2 = hVal * 10000 * 0.5;
 
-            aVal2 = Math.floor(aVal2 / 10) / 100;
-            bVal2 = Math.floor(bVal2 / 10) / 100;
-            cVal2 = Math.floor(cVal2 / 10) / 100;
-            dVal2 = Math.floor(dVal2 / 10) / 100;
-            eVal2 = Math.floor(eVal2 / 10) / 100;
-            fVal2 = Math.floor(fVal2 / 10) / 100;
-            gVal2 = Math.floor(gVal2 / 10) / 100;
-            hVal2 = Math.floor(hVal2 / 10) / 100;
+            aVal2 = Math.floor(aVal2 / 10) / 1000;
+            bVal2 = Math.floor(bVal2 / 10) / 1000;
+            cVal2 = Math.floor(cVal2 / 10) / 1000;
+            dVal2 = Math.floor(dVal2 / 10) / 1000;
+            eVal2 = Math.floor(eVal2 / 10) / 1000;
+            fVal2 = Math.floor(fVal2 / 10) / 1000;
+            gVal2 = Math.floor(gVal2 / 10) / 1000;
+            hVal2 = Math.floor(hVal2 / 10) / 1000;
 
-            var aVal4 = aVal * 1.3104 * unit_cost;
-            var bVal4 = bVal * 1.5264 * unit_cost;
-            var cVal4 = cVal * 1.7424 * unit_cost;
-            var dVal4 = dVal * 1.7472 * unit_cost;
-            var eVal4 = eVal * 2.0352 * unit_cost;
-            var fVal4 = fVal * 2.3232 * unit_cost;
-            var gVal4 = gVal * 0.34 * unit_cost;
-            var hVal4 = hVal * 0.5 * unit_cost;
+            var aVal4 = aVal * 13104 * unit_cost;
+            var bVal4 = bVal * 15264 * unit_cost;
+            var cVal4 = cVal * 17424 * unit_cost;
+            var dVal4 = dVal * 17472 * unit_cost;
+            var eVal4 = eVal * 20352 * unit_cost;
+            var fVal4 = fVal * 23232 * unit_cost;
+            var gVal4 = gVal * 34 * unit_cost;
+            var hVal4 = hVal * 5 * unit_cost;
 
-            aVal4 = Math.floor(aVal4 / 10) * 10;
-            bVal4 = Math.floor(bVal4 / 10) * 10;
-            cVal4 = Math.floor(cVal4 / 10) * 10;
-            dVal4 = Math.floor(dVal4 / 10) * 10;
-            eVal4 = Math.floor(eVal4 / 10) * 10;
-            fVal4 = Math.floor(fVal4 / 10) * 10;
-            gVal4 = Math.floor(gVal4 / 10) * 10;
-            hVal4 = Math.floor(hVal4 / 10) * 10;
+            aVal4 = Math.floor(aVal4 / 100000) * 10;
+            bVal4 = Math.floor(bVal4 / 100000) * 10;
+            cVal4 = Math.floor(cVal4 / 100000) * 10;
+            dVal4 = Math.floor(dVal4 / 100000) * 10;
+            eVal4 = Math.floor(eVal4 / 100000) * 10;
+            fVal4 = Math.floor(fVal4 / 100000) * 10;
+            gVal4 = Math.floor(gVal4 / 100000) * 10;
+            hVal4 = Math.floor(hVal4 / 100000) * 10;
 
             var total = aVal4 + bVal4 + cVal4 + dVal4 + eVal4 + fVal4 + gVal4 + hVal4;
 
@@ -130,25 +130,25 @@
                 hVal3 = ""
                 hVal4 = ""
             }
-            var resultVal1 = Math.floor((parseFloat(aVal) * 1.3104 + parseFloat(bVal) * 1.5264 + parseFloat(cVal) * 1.7424 + parseFloat(dVal) * 1.7472 + parseFloat(eVal) * 2.0352 + parseFloat(fVal) * 2.3232 + parseFloat(gVal) * 0.34 + parseFloat(hVal) * 0.5) * 100) / 100;
+            var resultVal1 = Math.floor((parseFloat(aVal) * 1.310400001 + parseFloat(bVal) * 1.526400001 + parseFloat(cVal) * 1.742400001 + parseFloat(dVal) * 1.747200001 + parseFloat(eVal) * 2.035200001 + parseFloat(fVal) * 2.323200001 + parseFloat(gVal) * 0.3400001 + parseFloat(hVal) * 0.500001) * 100) / 100;
             document.getElementById("result1").innerText = resultVal1;
             var resultVal2 = String("(" + aVal + " * 1.3104) + (" + bVal + " * 1.5264) + (" + cVal + " * 1.7424) + (" + dVal + " * 1.7472) + (" + eVal + " * 2.0352) + (" + fVal + " * 2.3232) + (" + gVal + " * 0.34) + (" + hVal + " * 0.5)\n\n") + aVal3 + bVal3 + cVal3 + dVal3 + eVal3 + fVal3 + gVal3 + hVal3;
             var resultVal3 = String(aVal4 + bVal4 + cVal4 + dVal4 + eVal4 + fVal4 + gVal4 + hVal4);
             resultVal2 = resultVal2.substr(0, resultVal2.length - 2) + " = " + resultVal1 + "\n\n현재 발생 금액\n" + resultVal3.substr(0, resultVal3.length - 2) + " = " + numberFormat(total);
             if (total - house_fund > 0) {
-                resultVal2 = resultVal2 + "\n\n주택(344만원 지원)\n초과 면적 : " + resultVal1 + " - " + house_money + " = " + (Math.floor(resultVal1 * 100 - house_money * 100) / 100) + "\n추가적으로 발생하는 자부담\n" + numberFormat(total) + " - " + numberFormat(house_fund) + " = " + numberFormat(total - house_fund);
+                resultVal2 = resultVal2 + "\n\n주택(344만원 지원)\n초과 면적 : " + resultVal1 + " - " + house_money + " = " + (Math.floor(resultVal1 * 1000 - house_money * 1000) / 1000) + "\n추가적으로 발생하는 자부담\n" + numberFormat(total) + " - " + numberFormat(house_fund) + " = " + numberFormat(total - house_fund);
             }
             else {
                 resultVal2 = resultVal2 + "\n\n============================\n주택 지원금(344만원)의 추가적인 자부담은 없습니다.\n============================";
             }
             if (total - non_house_fund > 0) {
-                resultVal2 = resultVal2 + "\n\n비주택(688만원 지원)\n초과 면적 : " + resultVal1 + " - " + non_house_money + " = " + (Math.floor(resultVal1 * 100 - non_house_money * 100) / 100) + "\n추가적으로 발생하는 자부담\n" + numberFormat(total) + " - " + numberFormat(non_house_fund) + " = " + numberFormat(total - non_house_fund);
+                resultVal2 = resultVal2 + "\n\n비주택(688만원 지원)\n초과 면적 : " + resultVal1 + " - " + non_house_money + " = " + (Math.floor(resultVal1 * 1000 - non_house_money * 1000) / 1000) + "\n추가적으로 발생하는 자부담\n" + numberFormat(total) + " - " + numberFormat(non_house_fund) + " = " + numberFormat(total - non_house_fund);
             }
             else {
                 resultVal2 = resultVal2 + "\n\n============================\n비주택 지원금(688만원)의 추가적인 자부담은 없습니다.\n============================";
             }
 			if (total - non_house_fund2 > 0) {
-                resultVal2 = resultVal2 + "\n\n비주택(172만원 지원)\n초과 면적 : " + resultVal1 + " - " + non_house_money2 + " = " + (Math.floor(resultVal1 * 100 - non_house_money2 * 100) / 100) + "\n추가적으로 발생하는 자부담\n" + numberFormat(total) + " - " + numberFormat(non_house_fund2) + " = " + numberFormat(total - non_house_fund2);
+                resultVal2 = resultVal2 + "\n\n비주택(172만원 지원)\n초과 면적 : " + resultVal1 + " - " + non_house_money2 + " = " + (Math.floor(resultVal1 * 1000 - non_house_money2 * 1000) / 1000) + "\n추가적으로 발생하는 자부담\n" + numberFormat(total) + " - " + numberFormat(non_house_fund2) + " = " + numberFormat(total - non_house_fund2);
             }
             else {
                 resultVal2 = resultVal2 + "\n\n============================\n비주택 지원금(172만원)의 추가적인 자부담은 없습니다.\n============================";
