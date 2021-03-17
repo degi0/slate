@@ -7,7 +7,7 @@ function calculate() {
   var display = document.getElementById("display");
   var result = eval(display.value);
   var displayResult = document.getElementById("result");
-  displayResult.value = result;
+  displayResult.value = result.toFixed(2);
 }
  
 function reset() {
